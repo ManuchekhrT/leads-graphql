@@ -1,0 +1,11 @@
+query LeadStatusTypes {
+    fetchLeadStatusTypes {
+        id
+        title
+        step
+        stepsCount
+        color
+        backgroundColor
+        legacyColor
+    }
+}

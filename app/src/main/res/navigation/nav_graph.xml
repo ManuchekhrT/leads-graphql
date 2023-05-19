@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LeadsFragment">
+
+    <fragment
+        android:id="@+id/LeadsFragment"
+        android:name="tj.task.graphqlleadsapp.presentation.leads.LeadsFragment"
+        android:label="@string/leads_fragment_label"
+        tools:layout="@layout/fragment_leads">
+        <action
+            android:id="@+id/action_LeadsFragment_to_DetailedLeadFragment"
+            app:destination="@id/DetailedLeadFragment" />
+        <action
+            android:id="@+id/action_LeadsFragment_to_CreateNewLeadFragment"
+            app:destination="@id/CreateNewLeadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailedLeadFragment"
+        android:name="tj.task.graphqlleadsapp.presentation.lead.DetailedLeadFragment"
+        android:label="@string/detailed_lead_fragment_label"
+        tools:layout="@layout/fragment_detailed_lead">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/CreateNewLeadFragment"
+        android:name="tj.task.graphqlleadsapp.presentation.create_lead.CreateNewLeadFragment"
+        android:label="@string/create_new_lead_fragment_label"
+        tools:layout="@layout/fragment_create_new_lead">
+
+    </fragment>
+</navigation>

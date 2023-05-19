@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_general_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:text="@string/general_info"
+        android:textColor="@color/dark_blue"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_general_info"
+        app:layout_constraintStart_toEndOf="@+id/tv_general_info"
+        app:layout_constraintTop_toTopOf="@+id/tv_general_info" />
+
+    <!-- 1  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_lead_intention"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/lead_intention"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_ad_source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_general_info">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_lead_intention"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue"
+            android:focusable="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_ad_source"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:hint="@string/ad_source"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout_lead_intention"
+        app:layout_constraintTop_toBottomOf="@+id/tv_general_info">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_et_ad_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 2 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_country"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/country"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_web_source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_lead_intention">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_web_source"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/ad_source"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout_country"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_lead_intention">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_web_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 3 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_city_or_region"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/city_or_region"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_channel_source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_country">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_city_or_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_channel_source"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/channel_source"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout_city_or_region"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_country">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_et_channel_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 4 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_language"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/language"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_property_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_city_or_region">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_property_type"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/property_type"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout_language"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_city_or_region">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_property_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 5 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_nationality"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/nationality"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_birthday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_language">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_nationality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_birthday"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/birth_day"
+        android:textColor="@color/dark_blue"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout_nationality"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_language">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edittext_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_budget"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/budget"
+        android:textColor="@color/dark_blue"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_nationality">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_et_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_location"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/location"
+        android:textColor="@color/dark_blue"
+        android:textColorHint="@color/grey_3"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_budget">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

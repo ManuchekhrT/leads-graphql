@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="CirclePointView">
+        <attr name="circleColor" format="color" />
+        <attr name="circleRadius" format="dimension" />
+    </declare-styleable>
+</resources>

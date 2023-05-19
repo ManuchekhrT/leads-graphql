@@ -1,0 +1,89 @@
+query Lead($leadId: Int!) {
+    fetchLead(params: { leadId: $leadId}) {
+        data {
+            id
+            personId
+            displayName
+            displaySource
+
+            projects {
+                id title
+            }
+            contacts {
+                data {
+                    emailContact {
+                        contactId
+                        email
+                        title
+                    }
+                    id
+                    phoneContact {
+                        phone
+                        title
+                        telegramId
+                        telegramUsername
+                        contactId
+                        color
+                    }
+                    sessionContact {
+                        contactId
+                        sessionId
+                    }
+                    type {
+                        id
+                        title
+                    }
+                    typeId
+                    editable
+                }
+            }
+            avatar { id name mimeType size resolution thumbnail path }
+            status { backgroundColor color id step stepsCount title }
+            intention { id title }
+            adSource { id title }
+            country { id emoji adWordsCode title phoneCode shortCode1 shortCode2 }
+            webSource {
+                id
+                title
+                url
+            }
+            city {
+                countryId
+                id
+                offset
+                offsetMs
+                timezone
+                title
+            }
+            channelSource { id title }
+            languages {
+                id
+                title
+                shortCode
+            }
+            propertyType {
+                id
+                title
+            }
+            nationality {
+                countryId
+                id
+                title
+            }
+            adTags {
+                id
+                conditional
+                field
+                key
+                value
+                category {
+                    id
+                    title
+                    color
+                }
+            }
+            birthDate
+            budget
+        }
+    }
+}

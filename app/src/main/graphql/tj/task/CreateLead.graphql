@@ -1,0 +1,26 @@
+mutation CreateLead(
+    $firstName: String!,
+    $lastName: String,
+    $intentionId: Int!,
+    $countryId: Int,
+    $cityId: Int,
+    $languageIds: [Int!]!,
+    $contacts: [ContactDataInput!]!,
+    $leadSourceId: Int
+) {
+    createLead(params: {firstName: $firstName, lastName: $lastName, intentionId: $intentionId, countryId: $countryId, cityId: $cityId, languageIds: $languageIds, contacts: $contacts, leadSourceId: $leadSourceId})
+    {
+        data {
+            id
+            personId
+            firstName
+            displayName
+            intention {
+                id title
+            }
+            languages {
+                id title
+            }
+        }
+    }
+}

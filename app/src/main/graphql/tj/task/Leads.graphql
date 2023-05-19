@@ -1,0 +1,20 @@
+query Leads {
+    fetchLeads(pagination: { take: 20 }, params: { ascending: false }) {
+        cursor
+        data {
+            id
+            personId
+            avatar { id name mimeType size resolution thumbnail path }
+            country { id emoji adWordsCode title phoneCode shortCode1 shortCode2}
+            adSource { id title }
+            status { backgroundColor color id step stepsCount title }
+            intention { id title }
+            channelSource { id title }
+            displayName
+            createdAt
+            updatedAt
+        }
+        hasMore
+        totalCount
+    }
+}
